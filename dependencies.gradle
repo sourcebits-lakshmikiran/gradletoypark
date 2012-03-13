@@ -1,0 +1,105 @@
+junitVersion="4.10"
+cglibVersion="2.2.2"
+guavaVersion="11.0.2"
+httpVersion="4.1.4"
+servletVersion="2.5"
+springVersion="3.1.1.RELEASE"
+springSecurityVersion="3.1.0.RELEASE"
+jacksonAslVersion="1.9.5"
+slf4jVersion="1.6.4"
+logbackVersion="1.0.1"
+hamcrestVersion="1.3.RC2"
+mockitoVersion="1.9.0"
+javassistVersion="3.15.0-GA"
+jaxbVersion="2.2.6"
+romeVersion="1.0"
+h2Version="1.3.164"
+hibernateVersion="4.1.0.Final"
+mysqlVersion="5.1.18"
+hsqldbVersion="2.2.8"
+lang3Version="3.1"
+
+
+libs = [
+	//spring
+	spring: [
+		core: "org.springframework:spring-core:$springVersion",
+		webmvc: "org.springframework:spring-webmvc:$springVersion",
+		web: "org.springframework:spring-web:$springVersion",
+		oxm: "org.springframework:spring-oxm:$springVersion",
+		tx: "org.springframework:spring-tx:$springVersion",
+		aop: "org.springframework:spring-aop:$springVersion",
+		jdbc: "org.springframework:spring-jdbc:$springVersion",
+		orm: "org.springframework:spring-orm:$springVersion"
+	],
+	springdata: [
+		jpa: "org.springframework.data:spring-data-jpa:1.0.3.RELEASE"
+	],
+	springsecurity: [
+		web: "org.springframework.security:spring-security-web:$springSecurityVersion",
+		config: "org.springframework.security:spring-security-config:$springSecurityVersion"
+	],
+	commons: [
+		codec: "commons-codec:commons-codec:1.6",
+		lang3: "org.apache.commons:commons-lang3:$lang3Version"
+	],
+	google: [
+		guava: "com.google.guava:guava:$guavaVersion"
+	],
+	cglib: "cglib:cglib-nodep:$cglibVersion",
+	apache: [
+		http: [
+			core: "org.apache.httpcomponents:httpcore:$httpVersion",
+			client: "org.apache.httpcomponents:httpclient:$httpVersion"
+		]
+	],
+	servlet_api: "javax.servlet:servlet-api:$servletVersion",
+	jackson: [
+		mapperasl: "org.codehaus.jackson:jackson-mapper-asl:$jacksonAslVersion"
+	],
+	xstream: "com.thoughtworks.xstream:xstream:1.4.2",
+	javax: [
+		xml: [
+			jaxbapi: "javax.xml.bind:jaxb-api:$jaxbVersion"
+		]
+	],
+	rome: "rome:rome:$romeVersion",
+
+	hibernate: [
+		entitymanager: "org.hibernate:hibernate-entitymanager:$hibernateVersion",
+		jpamodelgen: "org.hibernate:hibernate-jpamodelgen:1.2.0.FINAL"
+	],
+	databases: [
+		h2: "com.h2database:h2:$h2Version",
+		mysql: "mysql:mysql-connctor-java:$mysqlVersion",
+		hsqldb: "org.hsqldb:hsqldb:$hsqldbVersion"
+	],
+
+	//logging
+	logging: [
+		slf4j: [
+			api: "org.slf4j:slf4j-api:$slf4jVersion",
+			jcl: "org.slf4j:jcl-over-slf4j:$slf4jVersion"
+		],
+		logback: [
+			classic: "ch.qos.logback:logback-classic:$logbackVersion"
+		]
+	],
+	
+	//testing
+	testing: [
+		junit: "junit:junit:$junitVersion",
+		junitdep: "junit:junit-dep:$junitVersion",
+		hamcrest: [
+			core: "org.hamcrest:hamcrest-core:$hamcrestVersion",
+			library: "org.hamcrest:hamcrest-library:$hamcrestVersion"
+		],
+		mockito: [
+			core: "org.mockito:mockito-core:$mockitoVersion"
+		],
+		restassured: "com.jayway.restassured:rest-assured:1.5"
+	],
+	groovy: "org.codehaus.groovy:groovy:$groovyVersion",
+	junit: "junit:junit:$junitVersion"
+	
+]

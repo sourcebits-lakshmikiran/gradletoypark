@@ -1,0 +1,16 @@
+dependencies {
+	compile project(':common'), project(':util')
+	compile libs.spring.oxm,
+			libs.spring.tx,
+			libs.springsecurity.web,
+			libs.springsecurity.config,
+			libs.springdata.jpa,
+			libs.hibernate.entitymanager,
+			libs.javax.xml.jaxbapi,
+			libs.xstream
+
+	testCompile libs.testing.junit,
+				libs.testing.hamcrest.core,
+				libs.testing.hamcrest.library
+
+}

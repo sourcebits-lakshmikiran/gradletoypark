@@ -1,0 +1,29 @@
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'maven'
+	apply from: "${rootDir}/dependencies.gradle"
+	version=projectVersion
+	group=projectGroupId
+	repositories {
+		mavenCentral()
+		mavenLocal()
+		mavenRepo urls: [
+			"https://repository.jboss.org/nexus/content/groups/public/",
+			"http://maven.springframework.org/snapshot"
+		]
+	}
+}
+
+subprojects {
+	version=projectVersion
+
+	jar {
+		manifest.attributes provider: 'gradle'
+	}
+
+}
+
+
+task wrapper(type: Wrapper, description: "Generates the wrapper for ${gradleVersion}") {
+	gradleVersion = gradleVersion	
+}
